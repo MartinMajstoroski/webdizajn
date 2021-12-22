@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Галерија</title>
+   <link rel="stylesheet" href="galery.css">
+   <script src="gg.js"></script>
+    </style>
+</head>
+<body>
+  <div class="topnav">
+      <a class="active" href="proekt.html">Home</a>
+      <a href="proekt.html">Movies</a>
+      <a href="proekt.html">Food</a>
+      <a href="proekt.html">Music</a>
+      <a href="proekt.html">Blog</a>
+      <a href="galerija.html"> Галерија</a>
+      <a href="proekt.html">About</a>
+    
+    
+    </div>
+ 
+<h5>Ova e mojata galerija
+  
+</h5>
+<p id="demo"></p>
+<div id="respond">
+<div class="row">
+  <div class="column">
+    <div class="tooltip">
+      <span class="tooltiptext">Yugo coral '85</span>
+    
+    <img src="aad.jpeg" alt="Eminem" class="image3">
+  </div>
+    <h3>Leave a Comment</h3>
+    <div class="comment">
+      <div class="row">
+        <textarea id="title2" type="text "rows="2" cols="4" placeholder="Insert your name"></textarea>
+     
+      <textarea id="ime2" type="text "rows="2" cols="4" placeholder="write a comment......"></textarea>
+  
+    
+    <input type="submit" value="Post" onclick="insert2()" style="width:20px;" visibility:visible />
+  </div>
+  </div>
+  
+    <div id="display2" style="visibility: hidden;" class="" ></div>
+    <script type="text/javascript">
+    var titles2 = [];
+    var titleInput2 = document.getElementById("title2");
+    var imeInput2 = document.getElementById("ime2");
+    var messageBox2 = document.getElementById("display2");
+   
+    function insert2 () {
+      var k2="Ime: ";
+    titles2.push(k2 + titleInput2.value);
+    titles2.push(imeInput2.value);
+    clearAndShow2();
+    }
+    function clearAndShow2 ()
+    {
+    titleInput2.value = "";
+    imeInput2.value = "";
+    messageBox2.innerHTML = "";
+    messageBox2.innerHTML += titles2.join("<br/> ") + "<br/>";
+    document.getElementById("display2").style.visibility = 'visible';
+    document.getElementById("display2").className = 'film';
+    }
+   
+    </script>
+    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+    <i onclick="myFunc()"></i><button id="btn" class="btnst" onclick="myFunc()">0 </button>
+
+    </form>
+  </div>
+
+  <div class="column">
+    <div class="tooltip">
+      <span class="tooltiptext">Yugo coral '85</span>
+    <img src="aaa.jpeg" alt="Eminem" class="image2">
+  </div>
+    <h3>Leave a Comment</h3>
+    <div class="comment">
+      <div class="row">
+      <textarea id="title1" type="text "rows="2" cols="4" placeholder="Insert your name"></textarea>
+     
+      <textarea id="ime1" type="text "rows="2" cols="4" placeholder="write a comment......"></textarea>
+  
+    
+      <input type="submit" value="Post" onclick="insert1()" style="width:20px;" visibility:visible />
+    </div>
+    </div>
+    
+      <div id="display1" style="visibility: hidden;" class="" ></div>
+      <script type="text/javascript">
+      var titles1 = [];
+      var titleInput1 = document.getElementById("title1");
+      var imeInput1 = document.getElementById("ime1");
+      var messageBox1 = document.getElementById("display1");
+     
+      function insert1 () {
+        var k1="Ime: ";
+      titles1.push(k1 + titleInput1.value);
+      titles1.push(imeInput1.value);
+      clearAndShow1();
+      }
+      function clearAndShow1 ()
+      {
+      titleInput1.value = "";
+      imeInput1.value = "";
+      messageBox1.innerHTML = "";
+      messageBox1.innerHTML += titles1.join("<br/> ") + "<br/>";
+      document.getElementById("display1").style.visibility = 'visible';
+      document.getElementById("display1").className = 'film';
+      }
+     
+      </script>
+
+      <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+      <i onclick="myFunc1()"></i><button id="btn2" class="btnst" onclick="myFunc1()">0 </button>
+      </form>
+    
+  </div>
+
+  <div class="column">
+    <div class="tooltip">
+      <span class="tooltiptext">Yugo coral '85</span>
+    <img src="aac.jpg" alt="Eminem" class="image2">
+  </div>
+    <div class="comment">
+      <div class="row">
+      <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="Insert your name"></textarea>
+     
+      <textarea id="ime" type="text "rows="2" cols="4" placeholder="write a comment......"></textarea>
+  
+    
+      <input type="submit" value="Post" onclick="insert()" style="width:20px;" visibility:visible/>
+    </div>
+    </div>
+    
+      <div id="display" style="visibility: hidden;" class="" ></div>
+      <script type="text/javascript">
+      var titles = [];
+      var titleInput = document.getElementById("title");
+      var imeInput = document.getElementById("ime");
+      var messageBox = document.getElementById("display");
+      function Allow()
+      {
+      if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+      {
+      user.title.value="";
+      
+      alert("Please Enter only alphabets");
+      }
+      window.location.reload()
+      }
+      function insert () {
+        var k="Ime: ";
+      titles.push(k + titleInput.value);
+      titles.push(imeInput.value);
+      clearAndShow();
+      }
+      function clearAndShow ()
+      {
+      titleInput.value = "";
+      imeInput.value = "";
+      messageBox.innerHTML = "";
+      messageBox.innerHTML += titles.join("<br/> ") + "<br/>";
+      document.getElementById("display").style.visibility = 'visible';
+      document.getElementById("display").className = 'film';
+      }
+     
+      </script>
+     
+    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+    <i onclick="myFunc2()"></i><button id="btn3" class="btnst" onclick="myFunc2()">0 </button>
+
+    </form>
+
+  </div>
+  </div>
+  
+  
+</div>
+
+  
+</body>

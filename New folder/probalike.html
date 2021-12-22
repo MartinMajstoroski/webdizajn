@@ -1,0 +1,70 @@
+<!DOCTYPE html><html> <head> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <style>
+                button i{
+                    transition: .3s all ease;
+                }
+                .btn_up.clicked,.btn_up:hover i{
+                    color: darkblue;
+                }
+                .btn_down.clicked,.btn_down:hover i{
+                    color: darkred;
+                }   
+                .fa-thumbs-up:before{
+                    display: flex;
+                    margin-left: 4px;
+                    margin-bottom: 3px;
+                  
+                }
+                .fa-thumbs-down:before {
+                    display: flex;
+                    margin-left: 4px;
+                }
+        
+                </style>
+        
+    <button class="btn_up" onclick ="myFunction(this)" name="button1" type="button1" style="font-size:10px">0 &nbsp | <i class="fa fa-thumbs-up"></i></button> 
+    <button class="btn_down" onclick ="myFunction(this)" name="button2" type="button2" style="font-size:10px">0 &nbsp | <i class="fa fa-thumbs-down"></i></button>
+    <script>
+        var btn_up = document.querySelector('.btn_up');
+        var btn_down = document.querySelector('.btn_down');
+    
+        function myFunction(elem){
+            elem.classList.toggle('clicked');
+            if(elem === btn_up){
+                btn_down.classList.remove('clicked');
+            }else{
+                btn_up.classList.remove('clicked');
+            }
+        }
+    </script>
+
+<div class="comment">
+    <textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+    <input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+    </div>
+    <div id="display"></div>
+    <script type="text/javascript">
+    var titles = [];
+    var titleInput = document.getElementById("title");
+    var messageBox = document.getElementById("display");
+    function Allow()
+    {
+    if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+    {
+    user.title.value="";
+    alert("Please Enter only alphabets");
+    }
+    window.location.reload()
+    }
+    function insert () {
+    titles.push(titleInput.value);
+    clearAndShow();
+    }
+    function clearAndShow ()
+    {
+    titleInput.value = "";
+    messageBox.innerHTML = "";
+    messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+    }
+    </script>
+    </body> </html>
